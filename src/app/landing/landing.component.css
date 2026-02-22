@@ -1,0 +1,16 @@
+/* all landing page rules are defined globally in styles.css
+   to ensure variables and body/header selectors apply correctly */
+
+/* component‑scoped helpers if needed */
+
+/* keep the typing cursor color in case encapsulation is re‑enabled */
+.typing { color: var(--main-color); }
+
+.circle-spin {
+    position: absolute; width: 100%; height: 100%;
+    border-radius: 50%; border: 4px solid transparent;
+    border-top-color: var(--main-color); border-bottom-color: var(--main-color);
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }

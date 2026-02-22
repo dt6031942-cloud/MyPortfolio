@@ -1,0 +1,104 @@
+<header>
+  <!-- logo can be plain link; no router needed since landing is current route -->
+  <a href="#home" class="logo">Dev‑Koushik<span>.</span></a>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#about">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <!-- admin link remains routerLink because it goes to different route -->
+    <a routerLink="/admin/login" class="btn admin-btn">Admin Login</a>
+  </nav>
+</header>
+
+<section class="home" id="home">
+  <div class="home-content">
+    <h1>Hi, I'm Koushik</h1>
+    <h3>Senior <span class="typing"></span></h3>
+    <p>
+      6+ years of expertise in architecting and developing enterprise-level
+      applications. My core strength lies in
+      <strong>.NET Ecosystem</strong> and <strong>Advanced SQL Server</strong>.
+    </p>
+    <div class="btn-box">
+      <a href="assets/CV.pdf" download class="btn">Download CV</a>
+    </div>
+  </div>
+
+ <div class="home-img">
+    <div class="circle-spin"></div>
+    <img src="assets/kd.jpg" alt="Portrait of Koushik" />
+</div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="heading">My <span>Specialization</span></h2>
+  <div class="skills-container">
+    <div class="skill-box">
+      <h3>Backend Development</h3>
+      <div class="skill-content">
+        <div class="progress">
+          <h4>.NET Core / Web API <span>95%</span></h4>
+          <div class="bar"><span style="width: 95%"></span></div>
+        </div>
+        <div class="progress">
+          <h4>C# <span>90%</span></h4>
+          <div class="bar"><span style="width: 90%"></span></div>
+        </div>
+        <div class="progress">
+          <h4>Entity Framework <span>85%</span></h4>
+          <div class="bar"><span style="width: 85%"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="skill-box">
+      <h3>Database & DevOps</h3>
+      <div class="skill-content">
+        <div class="progress">
+          <h4>SQL Server (T-SQL) <span>92%</span></h4>
+          <div class="bar"><span style="width: 92%"></span></div>
+        </div>
+        <div class="progress">
+          <h4>Query Optimization <span>88%</span></h4>
+          <div class="bar"><span style="width: 88%"></span></div>
+        </div>
+        <div class="progress">
+          <h4>Azure / CI-CD <span>75%</span></h4>
+          <div class="bar"><span style="width: 75%"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="experience" id="experience">
+  <h2 class="heading">Professional <span>Journey</span></h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span>2021 - Present</span>
+        <h3>Senior Software Engineer</h3>
+        <p>Leading the development of high-traffic .NET microservices and managing complex SQL migrations for fintech clients.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span>2018 - 2021</span>
+        <h3>Software Developer</h3>
+        <p>Developed and maintained legacy ASP.NET MVC applications and optimized stored procedures for 30% faster data retrieval.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
+  <form (submit)="sendMessage($event)">
+    <div class="input-box">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+    </div>
+    <textarea placeholder="Your Message" required></textarea>
+    <input type="submit" value="Send Message" class="btn" />
+  </form>
+</section>

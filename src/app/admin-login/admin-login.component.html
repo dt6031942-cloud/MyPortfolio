@@ -1,0 +1,14 @@
+<div class="login-wrapper">
+  <h2>Admin Login</h2>
+  <form (ngSubmit)="submit(loginForm.value)" #loginForm="ngForm">
+    <div>
+      <label>Email</label>
+      <input type="email" name="email" ngModel required />
+    </div>
+    <div>
+      <label>Password</label>
+      <input type="password" name="password" ngModel required />
+    </div>
+    <button type="submit" class="btn">Sign in</button>
+  </form>
+</div>

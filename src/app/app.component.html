@@ -1,0 +1,8 @@
+<div class="container">
+  <app-sidebar></app-sidebar>
+  <!-- when the sidebar is collapsed add .shift so the main content moves left -->
+  <main class="main" [class.shift]="uiService.isSidebarCollapsed()">
+    <app-topbar></app-topbar>
+    <app-dashboard></app-dashboard>
+  </main>
+</div>

@@ -1,0 +1,13 @@
+<div class="cards">
+  @for (card of stats(); track card.title) {
+    <div class="card" [ngClass]="card.colorClass">
+      <h3>{{ card.title }}</h3>
+      <h1>{{ card.value }}</h1>
+    </div>
+  }
+</div>
+
+<div class="chart-box">
+  <h3>Traffic Analytics</h3>
+  <canvas #trafficChart></canvas>
+</div>

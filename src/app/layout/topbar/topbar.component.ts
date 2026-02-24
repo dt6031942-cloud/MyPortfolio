@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { UiService } from '../../core/services/ui.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-topbar',
@@ -12,6 +13,8 @@ import { CommonModule } from '@angular/common';
 export class TopbarComponent {
   // make the ui service available to the template
   public uiService = inject(UiService);
+  // router used for navigation so base-href is respected
+  private router = inject(Router);
 
   menuOpen = false;
 
@@ -21,10 +24,9 @@ export class TopbarComponent {
 
   logout(event: Event) {
     event.stopPropagation(); // don't close immediately by clicking
-    // simple logout: navigate back to landing
-    window.alert('Logged out');
+    // simple logout: navigate back to landing via router
+    // avoids hard-coded "/" which on GitHub Pages points to user site root
     this.menuOpen = false;
-    // could call an AuthService.logout() here
-    window.location.href = '/';
+    this.router.navigate(['/']);
   }
 }
